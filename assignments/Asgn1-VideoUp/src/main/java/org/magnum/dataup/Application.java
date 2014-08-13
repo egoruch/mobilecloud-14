@@ -25,12 +25,14 @@ import org.springframework.boot.context.embedded.MultiPartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 // This annotation tells Spring to auto-wire your application
 @EnableAutoConfiguration
 // This annotation tells Spring to look for controllers, etc.
 // starting in the current package
-@ComponentScan
+@ComponentScan(basePackages = "org.magnum.dataup")
+//@EnableWebMvc
 //This annotation tells Spring that this class contains configuration
 //information
 //for the application.
